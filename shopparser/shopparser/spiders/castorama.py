@@ -5,10 +5,10 @@ from scrapy.loader import ItemLoader
 from shopparser.shopparser.items import ShopparserItem
 
 
-class LeroymerlinruSpider(scrapy.Spider):
-    name = 'leroymerlinru'
-    allowed_domains = ['spb.leroymerlin.ru']
-    start_urls = ['https://spb.leroymerlin.ru/catalogue/klei/']
+class CastoramalinruSpider(scrapy.Spider):
+    name = 'castorama'
+    allowed_domains = ['castorama.ru']
+    start_urls = ['https://www.castorama.ru/paint/']
 
     def parse(self, response: HtmlResponse):
         last_page_number = int(response.xpath("//uc-pagination/@total").extract_first())

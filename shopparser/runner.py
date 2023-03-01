@@ -1,7 +1,7 @@
 from scrapy.crawler import CrawlerProcess
 from scrapy.settings import Settings
 from shopparser.shopparser import settings
-from shopparser.shopparser.spiders.leroymerlin import LeroymerlinruSpider
+from shopparser.shopparser.spiders.castorama import CastoramalinruSpider
 
 
 if __name__ == '__main__':
@@ -9,6 +9,6 @@ if __name__ == '__main__':
     crawler_settings.setmodule(settings)
 
     process = CrawlerProcess(settings=crawler_settings)
-    process.crawl(LeroymerlinruSpider)
+    process.crawl(CastoramalinruSpider)
 
     process.start()
